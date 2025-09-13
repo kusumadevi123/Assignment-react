@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Category from "./components/Category";
 import SearchBar from "./components/SearchBar";
-import AddCategoryModal from "./components/AddCategoryModal"; // New import
+import AddCategoryModal from "./components/AddCategoryModal"; 
 import initialData from "./data/initialData.json";
 import "./index.css";
 
@@ -12,7 +12,7 @@ export default function App() {
   });
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [isAddCategoryOpen, setIsAddCategoryOpen] = useState(false); // State to control AddCategory modal
+  const [isAddCategoryOpen, setIsAddCategoryOpen] = useState(false); 
 
   useEffect(() => {
     localStorage.setItem("dashboard", JSON.stringify(dashboard));
