@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function AddWidgetModal({ categoryId, onAddWidget, onClose }) {
   const [widgetName, setWidgetName] = useState("");
   const [widgetContent, setWidgetContent] = useState("");
-  const [widgetType, setWidgetType] = useState("pie"); // Default widget type
+  const [widgetType, setWidgetType] = useState("pie"); 
 
   function handleAdd() {
     if (!widgetName) return;
@@ -11,12 +11,12 @@ export default function AddWidgetModal({ categoryId, onAddWidget, onClose }) {
       id: Date.now(),
       name: widgetName,
       content: widgetContent || "Random text here",
-      type: widgetType,  // Add this to send type info
+      type: widgetType,  
     };
     onAddWidget(categoryId, widget);
     setWidgetName("");
     setWidgetContent("");
-    setWidgetType("pie");  // reset to default
+    setWidgetType("pie");  
     onClose();
   }
 
